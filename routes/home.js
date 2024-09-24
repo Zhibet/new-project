@@ -5,8 +5,8 @@ const cardData = require('../models/cards')
 
 homeRoute.get('/',isAuthenticated, async(req,res)=>{
     const cards = await cardData.find({});
-    console.log(cards)
-    res.render('home',{cards})
+    const style = './home.css';
+    res.render('home',{cards,style})
 })
 
 module.exports = homeRoute;
