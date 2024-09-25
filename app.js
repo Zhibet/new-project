@@ -18,7 +18,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/miller-project')
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/static', express.static('public'))
 
 // Session setup
 app.use(session({
@@ -32,6 +31,8 @@ app.use(session({
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views'); // Specify the views directory
+app.use(express.static('public'));
+
 
 // Welcome route
 app.use('/',homeRoute)

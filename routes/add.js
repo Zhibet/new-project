@@ -3,7 +3,7 @@ const addRoute = express.Router();
 const Card = require('../models/cards'); 
 
 addRoute.get('/new', (req, res) => {
-    const style = './add.css';
+    const style = '/add.css';
     res.render('cardForm',{style});
 });
 

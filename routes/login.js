@@ -4,7 +4,8 @@ const User = require('../models/user');
 
 // Login GET route
 loginRoute.get('/login', (req, res) => {
-    res.render('login');
+    const style = '/login.css';
+    res.render('login',{style});
 });
 
 // Login POST route

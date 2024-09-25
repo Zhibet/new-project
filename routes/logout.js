@@ -6,7 +6,7 @@ logoutRoute.get('/logout', (req, res) => {
         if (err) {
             return res.status(500).send('Error logging out: ' + err.message);
         }
-        res.redirect('/login')
+        res.redirect('/login',)
     });
 });
 
